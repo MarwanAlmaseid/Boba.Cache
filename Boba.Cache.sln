@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34818.151
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Cache", "Boba.Cache\Boba.Cache.csproj", "{6433F8E6-C356-435D-A90E-1AEDD18C2ED6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7F1925BC-9BE8-43A8-B5B9-672C4A25A386}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache.Memory", "src\Boba.Cache.Memory\Boba.Cache.Memory.csproj", "{BC39F111-AF29-4866-9A23-1E3027ADB762}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache", "src\Boba.Cache\Boba.Cache.csproj", "{492B75E5-CDA0-4543-BAAA-1933BE3FDA41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Cache.Microsoft.DependencyInjection", "src\Boba.Cache.Microsoft.DependencyInjection\Boba.Cache.Microsoft.DependencyInjection.csproj", "{6926F3B6-67AC-431B-8450-24F8D7D12196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Cache.Memory.Microsoft.DependencyInjection", "src\Boba.Cache.Memory.Microsoft.DependencyInjection\Boba.Cache.Memory.Microsoft.DependencyInjection.csproj", "{641D9E10-4C00-45B8-BE43-14A05A7EC55B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +19,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6433F8E6-C356-435D-A90E-1AEDD18C2ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6433F8E6-C356-435D-A90E-1AEDD18C2ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6433F8E6-C356-435D-A90E-1AEDD18C2ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6433F8E6-C356-435D-A90E-1AEDD18C2ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC39F111-AF29-4866-9A23-1E3027ADB762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC39F111-AF29-4866-9A23-1E3027ADB762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC39F111-AF29-4866-9A23-1E3027ADB762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC39F111-AF29-4866-9A23-1E3027ADB762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492B75E5-CDA0-4543-BAAA-1933BE3FDA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492B75E5-CDA0-4543-BAAA-1933BE3FDA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492B75E5-CDA0-4543-BAAA-1933BE3FDA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492B75E5-CDA0-4543-BAAA-1933BE3FDA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6926F3B6-67AC-431B-8450-24F8D7D12196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6926F3B6-67AC-431B-8450-24F8D7D12196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6926F3B6-67AC-431B-8450-24F8D7D12196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6926F3B6-67AC-431B-8450-24F8D7D12196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641D9E10-4C00-45B8-BE43-14A05A7EC55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641D9E10-4C00-45B8-BE43-14A05A7EC55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641D9E10-4C00-45B8-BE43-14A05A7EC55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641D9E10-4C00-45B8-BE43-14A05A7EC55B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC39F111-AF29-4866-9A23-1E3027ADB762} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
+		{492B75E5-CDA0-4543-BAAA-1933BE3FDA41} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
+		{6926F3B6-67AC-431B-8450-24F8D7D12196} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
+		{641D9E10-4C00-45B8-BE43-14A05A7EC55B} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11862B96-40E1-4DA4-B017-A87E7DDD7871}

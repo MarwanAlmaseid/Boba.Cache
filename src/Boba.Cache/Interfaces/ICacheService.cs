@@ -2,13 +2,13 @@
 
 public interface ICacheService
 {
-    string Add<T>(string key, T value);
-    string AddRange<T>(string key, IEnumerable<T> values);
-    T Get<T>(string key);
+    Task AddAsync<T>(string key, T value);
+    Task AddRangeAsync<T>(string key, IEnumerable<T> values);
+    Task<T> GetAsync<T>(string key);
     Task<T?> GetOrCreateAsync<T>(string key, Func<Task<T>> acquire);
     IEnumerable<string> GetKeys(string? pattern);
-    void Delete(string key);
+    Task DeleteAsync(string key);
     void DeleteAll();
     void DeleteAllWithPrefix(string prefix);
-    bool IsExists(string key);
+    Task<bool> IsExistsAsync(string key);
 }

@@ -14,26 +14,32 @@ public class CacheService : ICacheService
         _keys = new();
     }
 
-    public string Add<T>(string key, T value)
+    public Task AddAsync<T>(string key, T value)
     {
         string jsonValue = JsonSerializer.Serialize(value);
         StoreKey(key);
 
-        return _memoryCache.Set(key, jsonValue);
+        _memoryCache.Set(key, jsonValue);
+
+        return Task.CompletedTask;
     }
 
-    public string AddRange<T>(string key, IEnumerable<T> values)
+    public Task AddRangeAsync<T>(string key, IEnumerable<T> values)
     {
         var jsonValues = JsonSerializer.Serialize(values);
         StoreKey(key);
 
-        return _memoryCache.Set(key, jsonValues);
+        _memoryCache.Set(key, jsonValues);
+
+        return Task.CompletedTask;
     }
 
-    public void Delete(string key)
+    public Task DeleteAsync(string key)
     {
         _keys.Remove(key);
         _memoryCache.Remove(key);
+
+        return Task.CompletedTask;
     }
 
     public void DeleteAll()
@@ -52,15 +58,15 @@ public class CacheService : ICacheService
 
         foreach (var key in keysWithPrefix)
         {
-            Delete(key);
+            DeleteAsync(key);
         }
     }
 
-    public T Get<T>(string key)
+    public Task<T> GetAsync<T>(string key)
     {
         var value = _memoryCache.Get(key);
 
-        return JsonSerializer.Deserialize<T>(value?.ToString());
+        return Task.FromResult(JsonSerializer.Deserialize<T>(value?.ToString()));
     }
 
     public IEnumerable<string> GetKeys(string? pattern)
@@ -73,9 +79,9 @@ public class CacheService : ICacheService
         _keys.Add(key);
     }
 
-    public bool IsExists(string key)
+    public Task<bool> IsExistsAsync(string key)
     {
-        return _memoryCache.TryGetValue(key, out object? _);
+        return Task.FromResult(_memoryCache.TryGetValue(key, out object? _));
     }
 
     public async Task<T?> GetOrCreateAsync<T>(string key, Func<Task<T>> acquire)
@@ -88,14 +94,14 @@ public class CacheService : ICacheService
         {
             var result = await task!.Value;
 
-            if (!IsExists(key))
+            if (!await IsExistsAsync(key))
                 StoreKey(key);
 
             return result;
         }
         catch
         {
-            Delete(key);
+            DeleteAsync(key);
 
             throw;
         }

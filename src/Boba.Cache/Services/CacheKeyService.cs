@@ -2,7 +2,7 @@
 
 namespace Boba.Cache;
 
-public class CacheKeyService() : ICacheKeyService
+public class CacheKeyService : ICacheKeyService
 {
     public string PrepareKey(string cacheKey, params object[] cacheKeyParameters)
     {

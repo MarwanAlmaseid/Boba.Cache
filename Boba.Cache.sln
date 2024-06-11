@@ -17,6 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache.Redis", "src\Bob
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache.Redis.Microsoft.DependencyInjection", "src\Boba.Cache.Redis.Microsoft.DependencyInjection\Boba.Cache.Redis.Microsoft.DependencyInjection.csproj", "{93115093-8261-49C7-B891-04DF03B9A39A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{00F6239C-F47C-43D5-8747-F2CB4A1ABCAF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\Boba\Boba.Cache.png = ..\..\..\..\Desktop\Boba\Boba.Cache.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,6 +1,5 @@
 ﻿using Boba.Cache;
 using Boba.Cache.Redis;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -18,12 +17,9 @@ public static class IServiceCollectionService
     /// <remarks>
     /// This method adds a Redis cache using StackExchange.Redis and registers a custom implementation of <see cref="ICacheService"/>.
     /// </remarks>
-    public static IServiceCollection UseBobaRedisCacheServices(this IServiceCollection services, Action<RedisCacheOptions> setupAction = null)
+    public static IServiceCollection UseBobaRedisCacheServices(this IServiceCollection services, string redisConnectionString)
     {
-        setupAction ??= opt => { };
-
-        services.AddStackExchangeRedisCache(setupAction);
-        services.AddSingleton<ICacheService, CacheService>();
+        services.AddSingleton<ICacheService>(provider => new CacheService(redisConnectionString));
 
         return services;
     }

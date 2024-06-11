@@ -4,7 +4,26 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageIcon>Boba.Cache.png</PackageIcon>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/MarwanAlmaseid/Boba.Cache/tree/master/src/Boba.Cache.Memory</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageTags>cache, cache-storge, cachemanager, cache-maker, in-memory-caching, dotnet, redis, dependency-injection, system-cache, cache-key, cache-manager, cache-manamgement</PackageTags>
+    <Title>Boba.Cache.Memory</Title>
+    <Description>Boba.cache is an ASP.NET Core library that simplifies cache management. It offers interfaces to handle all cache operations (get, set, remove,...), generate keys, and manage cache entries.</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Boba.Cache.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
@@ -12,6 +31,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Boba.Cache\Boba.Cache.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.MD">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

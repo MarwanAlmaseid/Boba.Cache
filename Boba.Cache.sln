@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache.Microsoft.Depend
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache.Memory.Microsoft.DependencyInjection", "src\Boba.Cache.Memory.Microsoft.DependencyInjection\Boba.Cache.Memory.Microsoft.DependencyInjection.csproj", "{641D9E10-4C00-45B8-BE43-14A05A7EC55B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Cache.Redis", "Boba.Cache.Redis\Boba.Cache.Redis.csproj", "{1C3F7C38-9062-4287-A5A5-45BC14370E3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache.Redis", "src\Boba.Cache.Redis\Boba.Cache.Redis.csproj", "{D8201F3C-486E-461A-986F-D0282EC9A4A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Cache.Redis.Microsoft.DependencyInjection", "Boba.Cache.Redis.Microsoft.DependencyInjection\Boba.Cache.Redis.Microsoft.DependencyInjection.csproj", "{6FDBE696-B50C-4176-ADE9-C7722CF14458}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Cache.Redis.Microsoft.DependencyInjection", "src\Boba.Cache.Redis.Microsoft.DependencyInjection\Boba.Cache.Redis.Microsoft.DependencyInjection.csproj", "{93115093-8261-49C7-B891-04DF03B9A39A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +39,14 @@ Global
 		{641D9E10-4C00-45B8-BE43-14A05A7EC55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{641D9E10-4C00-45B8-BE43-14A05A7EC55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{641D9E10-4C00-45B8-BE43-14A05A7EC55B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C3F7C38-9062-4287-A5A5-45BC14370E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C3F7C38-9062-4287-A5A5-45BC14370E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C3F7C38-9062-4287-A5A5-45BC14370E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C3F7C38-9062-4287-A5A5-45BC14370E3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6FDBE696-B50C-4176-ADE9-C7722CF14458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FDBE696-B50C-4176-ADE9-C7722CF14458}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FDBE696-B50C-4176-ADE9-C7722CF14458}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FDBE696-B50C-4176-ADE9-C7722CF14458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8201F3C-486E-461A-986F-D0282EC9A4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8201F3C-486E-461A-986F-D0282EC9A4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8201F3C-486E-461A-986F-D0282EC9A4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8201F3C-486E-461A-986F-D0282EC9A4A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93115093-8261-49C7-B891-04DF03B9A39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93115093-8261-49C7-B891-04DF03B9A39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93115093-8261-49C7-B891-04DF03B9A39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93115093-8261-49C7-B891-04DF03B9A39A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,8 +56,8 @@ Global
 		{492B75E5-CDA0-4543-BAAA-1933BE3FDA41} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
 		{6926F3B6-67AC-431B-8450-24F8D7D12196} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
 		{641D9E10-4C00-45B8-BE43-14A05A7EC55B} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
-		{1C3F7C38-9062-4287-A5A5-45BC14370E3F} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
-		{6FDBE696-B50C-4176-ADE9-C7722CF14458} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
+		{D8201F3C-486E-461A-986F-D0282EC9A4A4} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
+		{93115093-8261-49C7-B891-04DF03B9A39A} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11862B96-40E1-4DA4-B017-A87E7DDD7871}

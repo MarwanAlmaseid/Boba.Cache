@@ -1,6 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using StackExchange.Redis;
+﻿using StackExchange.Redis;
+using System.Text.Json;
 
 namespace Boba.Cache.Redis
 {
@@ -8,27 +7,23 @@ namespace Boba.Cache.Redis
     {
         private readonly IDatabase _cacheDb;
         private readonly ConnectionMultiplexer _connectionMultiplexer;
-        private const string  RedisConncetionStringKey = "Redis";
-       
-        public CacheService(IConfiguration configuration)
+
+        public CacheService(string redisConnection)
         {
-            var redisConnection = configuration.GetConnectionString(RedisConncetionStringKey) ??
-                throw new Exception("Redis connection string not found on the appsetting ConncetionString section, Kindly add your Redis connection string");
-            
             _connectionMultiplexer = ConnectionMultiplexer.Connect(redisConnection);
             _cacheDb = _connectionMultiplexer.GetDatabase();
         }
 
         public async Task AddAsync<T>(string key, T value)
         {
-            string jsonValue = JsonConvert.SerializeObject(value);
+            string jsonValue = JsonSerializer.Serialize(value);
 
             await _cacheDb.StringSetAsync(key, jsonValue);
         }
 
         public async Task AddRangeAsync<T>(string key, IEnumerable<T> values)
         {
-            var jsonValues = JsonConvert.SerializeObject(values);
+            var jsonValues = JsonSerializer.Serialize(values);
 
             await _cacheDb.StringSetAsync(key, jsonValues);
         }
@@ -59,7 +54,7 @@ namespace Boba.Cache.Redis
         {
             var value = await _cacheDb.StringGetAsync(key);
 
-            return JsonConvert.DeserializeObject<T>(value);
+            return JsonSerializer.Deserialize<T>(value);
         }
 
         public IEnumerable<string> GetKeys(string? pattern)

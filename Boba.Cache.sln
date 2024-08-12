@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\..\Desktop\Boba\Boba.Cache.png = ..\..\..\..\Desktop\Boba\Boba.Cache.png
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{0FD7E9C2-9434-4A97-A22A-41DF1D6A7363}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Cache.Web.Memory", "samples\Boba.Cache.Web.Memory\Boba.Cache.Web.Memory.csproj", "{92686AA9-5C87-45DC-84A5-3A30C6D936F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +56,10 @@ Global
 		{93115093-8261-49C7-B891-04DF03B9A39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93115093-8261-49C7-B891-04DF03B9A39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93115093-8261-49C7-B891-04DF03B9A39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92686AA9-5C87-45DC-84A5-3A30C6D936F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92686AA9-5C87-45DC-84A5-3A30C6D936F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92686AA9-5C87-45DC-84A5-3A30C6D936F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92686AA9-5C87-45DC-84A5-3A30C6D936F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,7 @@ Global
 		{641D9E10-4C00-45B8-BE43-14A05A7EC55B} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
 		{D8201F3C-486E-461A-986F-D0282EC9A4A4} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
 		{93115093-8261-49C7-B891-04DF03B9A39A} = {7F1925BC-9BE8-43A8-B5B9-672C4A25A386}
+		{92686AA9-5C87-45DC-84A5-3A30C6D936F5} = {0FD7E9C2-9434-4A97-A22A-41DF1D6A7363}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11862B96-40E1-4DA4-B017-A87E7DDD7871}

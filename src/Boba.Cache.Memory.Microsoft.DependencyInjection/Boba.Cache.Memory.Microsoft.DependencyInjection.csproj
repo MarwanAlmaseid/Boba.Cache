@@ -12,6 +12,7 @@
     <Title>Boba.Cache.Memory.Microsoft.DependencyInjection</Title>
     <PackageReadmeFile>README.MD</PackageReadmeFile>
     <Description>Boba.cache is an ASP.NET Core library that simplifies cache management. It offers interfaces to handle all cache operations (get, set, remove,...), generate keys, and manage cache entries.</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

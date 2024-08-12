@@ -86,16 +86,14 @@ public class CacheService : ICacheService
 
     public async Task<T?> GetOrCreateAsync<T>(string key, Func<Task<T>> acquire)
     {
-        var task = _memoryCache.GetOrCreate(
-           key,
-           entry => new Lazy<Task<T>>(acquire, true));
+        if (!await IsExistsAsync(key))
+            StoreKey(key);
 
         try
         {
-            var result = await task!.Value;
+            var task = _memoryCache.GetOrCreate(key, entry => new Lazy<Task<T>>(acquire, true));
 
-            if (!await IsExistsAsync(key))
-                StoreKey(key);
+            var result = await task!.Value;
 
             return result;
         }
